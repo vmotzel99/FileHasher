@@ -14,6 +14,7 @@ for root, dirs, files in os.walk("/"):
         bytes = f.read()
         readfhash = hashlib.sha256(bytes).hexdigest();
         st.write(filename, readfhash, datetime.now())
+        st.close()
       
     
         
